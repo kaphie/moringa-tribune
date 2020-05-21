@@ -26,8 +26,9 @@ class Article(models.Model):
     editor = models.ForeignKey(Editor, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
     pub_date = models.DateTimeField(auto_now_add=True)
-    article_image = models.ImageField(upload_to = 'articles/')
-    
+    article_image = models.ImageField(default='default.jpg',upload_to = 'articles/')
+
+
 @classmethod
 def search_by_title(cls,search_term):
     news = cls.objects.filter(title__icontains=search_term)
