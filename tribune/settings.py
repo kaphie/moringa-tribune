@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'tribune.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2h3fvjkfi34gf',
-        'USER': 'cuofiuqxhtvizx',
-        'PASSWORD':'df8b96eee0df35edda365da515c0ad30defa259f991e3ce9f5998d9a3d2af2fa',
-        'HOST': os.environ.get('DB_HOST', 'ec2'),
+        'NAME': 'postgres',
+        'USER': 'user',
+        'PASSWORD':'tyrrelhaslay718',
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
         'PORT': os.environ.get('DB_PORT', '5432'),
         'TEST': {
             'NAME': 'test_<app_name>'
