@@ -1,1 +1,4 @@
-web: gunicorn <m_tribune>.wsgi
+release: python manage.py makemigrations
+release: python manage.py migrate
+
+web: gunicorn tribune.wsgi
